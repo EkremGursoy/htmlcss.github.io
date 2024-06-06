@@ -438,6 +438,7 @@ margin-right: 32.5%;
   margin-left: 40px;
   border-radius: 5px;
   flex: 1;
+  padding: 10px;
 }
 
 .total hr{
@@ -460,6 +461,7 @@ margin-right: 32.5%;
 .green h4{
   padding-left: 10px;
   font-size: 24px;
+  margin-left: -20px;
 }
 
 .brown{
@@ -471,8 +473,14 @@ margin-right: 32.5%;
 }
 
 .pink{
- max-width: 500px;
+ max-width: 370px;
 }
+
+
+.pink h4{
+  margin-left: 30px;
+ }
+
 
 .brown li{
   font-size: 18px;
@@ -545,22 +553,26 @@ margin-right: 32.5%;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 600px) {
   nav {
     display: none;
     flex-direction: column;
     background-color: #273F2E;
     position: absolute;
-    top: 70px;
+    top: 0px;
     left: 0;
     width: 100%;
     padding: 10px;
     border-top: 1px solid white;
-    margin-top: 93px;
+    margin-top: 163px;
   }
 
   nav a {
-    font-size: 18px;
+    font-size: 9px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
   }
 
   #toggle:checked ~ nav {
@@ -581,33 +593,54 @@ margin-right: 32.5%;
     margin: 3px;
   }
 
+  nav div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .firstrow, .secondrow{
     flex-direction: column;
     padding-left: 0;
   }
 
+.mybag{
+  width: 370px;
+}
+
+.mybag img,.mybag h3,.mybag input{
+  margin-left: 120px;
+}
+
   .payment{
     margin-top: 100px;
     padding: 40px;
+    width: 290px;
+  }
+
+  .card-details input, .shipping input, .cardno{
+width: 130px;
   }
 
   .total{
     margin-top: 100px;
     padding: 55px;
+    width: 260px;
   }
 
   .total button{
     padding: 10px;
-    margin-right: 33px;
+    margin-left: -17px;
   }
 
   .shipping{
     padding: 42px;
+    width: 290px;
   }
 
   .map{
-    width: 500px;
-    margin-left: 0px;
+    width: 350px;
+    margin-left: 10px;
   }
 
   #aboutusimg{
@@ -618,6 +651,10 @@ margin-right: 32.5%;
   #Aboutus h3{
     margin: 20px;
   }
+
+.mid-img{
+margin-top: 20px;
+}
 
   .midtext{
   max-width: 350px;
@@ -641,11 +678,11 @@ margin-top: -60px;
   }
   
   .green{
-    margin-left: 230px;
+    margin-left: 130px;
   }
 
   .pink h4{
-    margin-left: 160px;
+    margin-left: 110px;
   }
 
   .brown{
@@ -660,7 +697,7 @@ margin-top: -60px;
   }
 
   .orange{
-    margin-left: 150px;
+    margin-left: 100px;
     margin-top: -200px;
   }
 
@@ -675,5 +712,40 @@ margin-top: -60px;
     margin-top: -20px;
      }
 
+     body{
+      object-position: center;
+     }
+
+     .footeritem{
+      margin: 20px;
+      margin-left: 50px;
+     }
+
+     .footerlinks li{
+      margin-left: -30px;
+     }
+
+     #imagedown{
+      margin-left: -60px;
+     }
+
+     #image{
+      margin-left: -30px;
+     }
+
+     #aboutusimg{
+      margin-right: 0px;
+     }
+
+     .contactform h2, form {
+      align-items: center;
+      margin-left: -60px;
+     }
+
+     .contactform h4{
+      margin-left: -10px;
+     }
+
+     
   }
 
