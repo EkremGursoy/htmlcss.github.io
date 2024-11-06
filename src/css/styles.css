@@ -133,6 +133,7 @@ font-size: 20px;
   text-transform: uppercase;
   text-align: center;
   font-size: 12px;
+  cursor:pointer
 }
 
 .addtocart:hover{
@@ -309,13 +310,6 @@ margin-right: 32.5%;
 
 
 /*SHOPPING CART*/
-.mybag img{
-  height: 200px;
-  margin: 0 auto;
-  margin-left: 180px;
-  margin-top: 20px;
-  border-radius: 40px;
-}
 
 .mybag {
   background-color: #d3d3d3;
@@ -324,26 +318,8 @@ margin-right: 32.5%;
   border-radius: 40px;
   padding-bottom: 25px;
   padding-top: 5px;
+  padding-left: 50px;
   flex: 1;
-}
-
-.mybag h3{
-  text-decoration: underline;
-  margin-left: 220px;
-}
-
-.mybag input{
-  margin-left: 170px;
-}
-
-.mybag hr{
-  width: 400px;
-  border-color: black;
-}
-
-.mybag h1{
-  margin-left: 48px;
-  padding: 10px;
 }
 
 .payment{
@@ -450,16 +426,18 @@ margin-right: 32.5%;
 
 /*Product Page*/
 
-.green img{
-  width: 250px;
-  height: 300px;
-  border: 2px solid;
+#product-image {
+  width: 300px; 
+  max-height:500px ;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+  border: 3px solid black;
   border-radius: 20px;
   padding: 20px;
- 
 }
 
-.green h4{
+#green h4{
   padding-left: 10px;
   font-size: 24px;
   margin-left: -20px;
@@ -505,16 +483,16 @@ margin-right: 32.5%;
   margin-left: 100px;
 }
 
-.orange{
+#orange{
   margin-left: 700px;
 }
 
-.orange h4{
+#orange h4{
   font-weight: bolder;
   font-size: 26px;
 }
 
-.orange button{
+#orange button{
   border-radius: 25%;
 
 }
@@ -678,7 +656,7 @@ margin-top: -60px;
     margin-left:50px;
   }
   
-  .green{
+  #green{
     margin-left: 130px;
   }
 
@@ -697,7 +675,7 @@ margin-top: -60px;
     width: 280px;
   }
 
-  .orange{
+  #orange{
     margin-left: 100px;
     margin-top: -200px;
   }
@@ -749,4 +727,177 @@ margin-top: -60px;
 
      
   }
+
+ /*js discount*/
+  #product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.product{
+    display: flex;    
+    padding: 0px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-direction: column;
+
+}
+
+.product img{
+  max-width: 100%;
+    height: auto;  
+    max-height: 150px; 
+    object-fit: cover;
+}
+
+.product h2{
+  font-size: 16px;
+}
+
+/*js woman*/
+
+#femaleproduct {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.female{
+  display: flex;    
+  padding: 0px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-direction: column;
+
+}
+
+.female img{
+max-width: 100%;
+  height: auto;  
+  max-height: 150px; 
+  object-fit: cover;
+}
+
+.female h2{
+font-size: 16px;
+}
+
+/*js Men*/
+
+#maleproduct {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.male{
+  display: flex;    
+  padding: 0px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-direction: column;
+
+}
+
+.male img{
+max-width: 100%;
+  height: auto;  
+  max-height: 150px; 
+  object-fit: cover;
+}
+
+.male h2{
+font-size: 16px;
+}
+
+/* jScss*/
+#my-bag {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  margin-left: -10px;
+  padding: 10px;
+  background-color: #ffffff00;
+  border: 5px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-height: calc(350px - 30px); 
+  overflow-y: auto;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item img {
+  width: 60px;
+  height: auto;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.cart-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cart-details h4 {
+  margin: 0;
+  font-size: 14px;
+  text-align: left;
+}
+
+.cart-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.remove-icon {
+  cursor: pointer;
+  margin-right: 5px;
+  color: rgb(175, 28, 28);
+}
+
+.quantity-input {
+  width: 50px;
+  margin-right: 5px;
+}
+
+.size-select {
+  margin-left: 5px;
+}
+
+.cart-price {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 40px;
+}
+
+#total-price{
+  font-weight: bolder;
+  font-size: 20px;
+}
 

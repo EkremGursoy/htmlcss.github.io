@@ -28,7 +28,8 @@
           <li><a href="index.html">MAN</a></li>
           <li><a href="aboutus.html">ABOUT US</a></li>
           <li><a href="contact.html">CONTACT</a></li>
-          <li><a href="shoppingcart.html"><i class="fas fa-shopping-cart"></i></a></li>        </ul>
+          <li><a href="shoppingcart.html" id="cart-icon"><i class="fas fa-shopping-cart"></i></a></li>
+        </ul>
       </nav>
       
       </div>
@@ -37,9 +38,9 @@
 <br><br><br>
     <div class="product page">
       <div class="brown">
-        <div class="green">
-          <h4><strong>EARLGO DOWN JACKET</strong></h4>
-          <img src="assets/images/lightgreenjacket.png" alt="">
+        <div id="green">
+          <h4 id="product-text"></h4>
+          <img id="product-image" src="" alt="Product Image">
         </div>
         <br>
         <div class="black">
@@ -74,17 +75,7 @@
         </div>
         </div>
       </div>
-      <div class="orange">
-        <h4>CHOOSE SIZE</h4>
-        <button>XS</button>
-        <button>S</button>
-        <button>L</button>
-        <button>XL</button>
-        <h4>QUANTITY</h4>
-        <input type="number" name="quantity">
-        <h4>299$</h4>
-        <a href="shoppingcart.html"><button class="submit">ADD TO CART</button></a>
-      </div>
+      
     </div>
 <br><br><br><br><br>
     <footer class="sectionarea">
@@ -134,5 +125,20 @@
       <h3 class="bottomtext">@RAINYDAYS 2024</h3>   
     </footer>
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
+
+    if (selectedProduct) {
+        if (selectedProduct.imgUrl) {
+          document.getElementById('product-image').src = selectedProduct.imgUrl; 
+          document.getElementById('product-text').textContent = selectedProduct.title;
+          document.getElementById('product-price').textContent = `$${selectedProduct.price}`;
+    } else {
+        console.error("Cant found the item.");
+    }
+  }});
+</script>
 </body>
 </html>
